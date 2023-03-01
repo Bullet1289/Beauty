@@ -1,0 +1,75 @@
+$gray: #EFEFEF;
+$green: #66C05D;
+$dark: #333333;
+
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bordered-button( $border-color, $color, $hover-color) {
+  width: 17rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $color;
+  border: 1px solid $border-color;
+  border-radius: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background-color: $border-color;
+    color: $hover-color;
+  }
+}
+
+@mixin full-button( $bg-color, $color, $hover-color) {
+  width: 13rem;
+  padding: 0.9rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $color;
+  border: 1px solid $bg-color;
+  border-radius: 3rem;
+  background-color: $bg-color;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background-color: transparent;
+    color: $hover-color;
+  }
+}
